@@ -211,7 +211,7 @@ nav#main ul li a:not(.button) {
 
 .recent p {
 	margin-bottom:60px;
-	color:#96eaba;
+	color:#fff;
 }
 
 .recent .item {
@@ -233,7 +233,7 @@ nav#main ul li a:not(.button) {
 
 .recent ul li.selected a {
 	background:#fff;
-	color:#27ae60;
+	color:#000;
 }
 
 .recent .show-more {
