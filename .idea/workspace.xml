@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9390c3a9-dc29-4b1b-a7fe-608613495ec8" name="Default" comment="awe">
-      <change beforePath="$PROJECT_DIR$/awetrip/about.html" afterPath="$PROJECT_DIR$/awetrip/about.html" />
-      <change beforePath="$PROJECT_DIR$/awetrip/cities.html" afterPath="$PROJECT_DIR$/awetrip/cities.html" />
       <change beforePath="$PROJECT_DIR$/awetrip/index.html" afterPath="$PROJECT_DIR$/awetrip/index.html" />
-      <change beforePath="$PROJECT_DIR$/awetrip/locals.html" afterPath="$PROJECT_DIR$/awetrip/locals.html" />
-      <change beforePath="$PROJECT_DIR$/awetrip/login.html" afterPath="$PROJECT_DIR$/awetrip/login.html" />
-      <change beforePath="$PROJECT_DIR$/awetrip/signup.html" afterPath="$PROJECT_DIR$/awetrip/signup.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -26,8 +21,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/awetrip/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="12" lean-forward="false" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="44" />
+            <state relative-caret-position="660">
+              <caret line="70" column="36" lean-forward="false" selection-start-line="70" selection-start-column="36" selection-end-line="70" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -110,12 +105,12 @@
       <list>
         <option value="$PROJECT_DIR$/awetrip/css/custom.css" />
         <option value="$PROJECT_DIR$/locals.html" />
-        <option value="$PROJECT_DIR$/awetrip/index.html" />
         <option value="$PROJECT_DIR$/awetrip/signup.html" />
         <option value="$PROJECT_DIR$/awetrip/locals.html" />
         <option value="$PROJECT_DIR$/awetrip/about.html" />
         <option value="$PROJECT_DIR$/awetrip/cities.html" />
         <option value="$PROJECT_DIR$/awetrip/login.html" />
+        <option value="$PROJECT_DIR$/awetrip/index.html" />
       </list>
     </option>
   </component>
@@ -208,7 +203,7 @@
       <option name="presentableId" value="Default" />
       <updated>1517681650369</updated>
       <workItem from="1517681651693" duration="408000" />
-      <workItem from="1518018003814" duration="8940000" />
+      <workItem from="1518018003814" duration="9030000" />
     </task>
     <task id="LOCAL-00001" summary="awe">
       <created>1518029565419</created>
@@ -249,7 +244,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9348000" />
+    <option name="totallyTimeSpent" value="9438000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1440" height="1017" extended-state="0" />
@@ -360,8 +355,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/awetrip/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="12" lean-forward="false" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="44" />
+        <state relative-caret-position="660">
+          <caret line="70" column="36" lean-forward="false" selection-start-line="70" selection-start-column="36" selection-end-line="70" selection-end-column="36" />
           <folding />
         </state>
       </provider>
