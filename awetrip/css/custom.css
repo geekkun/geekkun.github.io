@@ -30,7 +30,7 @@ h5 {
 ** Images
 */
 
-.container-spacy#triple img{
+.container-spacy#triple img,  .container-spacy#howworks img{
 	width: 50%;
 }
 
