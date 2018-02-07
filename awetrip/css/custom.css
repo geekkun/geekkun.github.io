@@ -156,6 +156,26 @@ nav#main ul li a:not(.button) {
 	color:#3a3a3a;
 }
 
+/*motto*/
+
+#motto_btn ul {
+	list-style-type: none;
+	margin:0;
+	padding:0;
+	float:left;
+}
+
+#motto_btn ul li {
+	display:inline-block;
+	margin-right:20px;
+}
+
+#motto_btn ul li a {
+	font-size:78%;
+	text-transform:uppercase;
+	font-weight:600;
+}
+
 /*
 ** Feature
 */
