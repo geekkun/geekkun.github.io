@@ -9,16 +9,17 @@
       <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    <script src="node_modules/jquery/dist/jquery.js"></script>
   </head>
   <body>
     <div class="container background-light-blue">
       <header class="row" id="main">
-        <div class="large-4 column">
+        <div class="large-4 small-2 column">
           <div class="brand">
             <a href="index.html">AweTrip</a>
           </div>
         </div>
-        <nav id="main" class="large-8 column">
+        <nav id="main" class="large-8 small-10 column">
           <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="cities.html">Cities</a></li>
@@ -44,15 +45,6 @@
           <img src="img/earth-new.png" alt="">
         </div>
       </div>
-      <!--<div class="row feature">-->
-        <!--<div class="large-6 column" id="motto_btn">-->
-          <!--<ul>-->
-            <!--<li><a href="#" class="button button-primary">Book</a></li>-->
-            <!--<li><a href="#howworks" class="button button-primary">How it works</a></li>-->
-          <!--</ul>-->
-        <!--</div>-->
-
-      <!--</div>-->
     </div>
     <div class="container-spacy features" id="triple">
       <div class="row">
@@ -79,7 +71,7 @@
     <div class="container-spacy background-light-blue recent">
       <h2>Available cities</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla non congue sapien, in tempus odio.</p>
-    
+
       <ul class="inline-list">
         <li class="selected"><a href="#">All</a></li>
         <li><a href="#">Europe</a></li>
@@ -90,52 +82,51 @@
       </ul>
 
       <div class="row">
-        <div class="large-4 column">
+        <div class="large-4 small-4 column">
           <div class="item background-grey">
-            <img src="img/robot.png" alt="">
-            <!--<p>texty</p>-->
+            <img src="img/me.jpg" alt="">
           </div>
         </div>
-        <div class="large-4 column">
+        <div class="large-4 small-4 column">
           <div class="item background-white">
             <img src="img/pizza.png" alt="">
           </div>
         </div>
-        <div class="large-4 column">
+        <div class="large-4 small-4 column">
           <div class="item background-red">
             <img src="img/eyeball.png" alt="">
           </div>
         </div>
       </div>
       <div class="row">
-        <div class="large-4 column">
+        <div class="large-4 small-4 column">
           <div class="item background-yellow">
             <img src="img/umbrella.png" alt="">
           </div>
         </div>
-        <div class="large-4 column">
+        <div class="large-4 small-4 column">
           <div class="item background-baby-blue">
             <img src="img/rocket.png" alt="">
           </div>
         </div>
-        <div class="large-4 column">
+        <div class="large-4 small-4 column">
           <div class="item background-pale-blue">
             <img src="img/jacket.png" alt="">
           </div>
         </div>
       </div>
       <div class="row">
-        <div class="large-4 column">
+        <div class="large-4 small-4 column">
           <div class="item background-slate-blue">
             <img src="img/ghost.png" alt="">
           </div>
         </div>
-        <div class="large-4 column">
+        <div class="large-4 small-4 column">
           <div class="item background-midnight">
             <img src="img/ff.png" alt="">
           </div>
         </div>
-        <div class="large-4 column">
+        <div class="large-4 small-4 column">
           <div class="item background-blue">
             <img src="img/utility.png" alt="">
           </div>
@@ -148,22 +139,27 @@
     <div class="container-spacy background-baby-blue features" id="howworks">
       <h2>How it Works</h2>
       <div class="row">
-        <div class="large-4 column">
+        <div class="large-4 small-4 column">
           <img src="img/book.png" alt="">
           <h5>Book</h5>
           <p>After submitting the booking request, our AI system searches and pairs you up with the most suitable local.</p>
         </div>
-        <div class="large-4 column">
+        <div class="large-4 small-4 column">
           <img src="img/accept.png" alt="">
           <h5>Accept</h5>
           <p>When the local has been found, you can choose to accept or reject him. </p>
         </div>
-        <div class="large-4 column">
+        <div class="large-4 small-4 column">
           <img src="img/explore.png" alt="">
           <h5>Explore</h5>
           <p>Once accepted, their contact will then be sent to you and you can start exploring!</p>
         </div>
       </div>
     </div>
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/foundation.min.js"></script>
+    <script>
+        $(document).foundation();
+    </script>
   </body>
 </html>

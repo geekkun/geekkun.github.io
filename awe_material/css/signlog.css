@@ -1,0 +1,9 @@
+body {
+    text-align: center;
+}
+
+#sign-form > button {
+    margin-top: 18px;
+    width: 50%;
+    height: 50px;
+}

@@ -1,0 +1,17 @@
+.mdc-card {
+    margin-top: 18px;
+    height: 350px;
+    width: 350px;
+}
+.mdc-card__media, .material-image {
+    background-image: url("../img/me.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+body {
+    text-align: center;
+}
+img {
+    max-height: 350px;
+}
