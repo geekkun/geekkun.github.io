@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>AweTrip</title>
+    <link rel="stylesheet"
+            href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/Custom.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZ91iA4TBjoIQ0RWQILJVwwG-NNrdOkVQ&libraries=places"></script>
+</head>
+<body class="mdc-typography">
+<header class="mdc-toolbar">
+    <div class="mdc-toolbar__row">
+        <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
+                <span class="mdc-toolbar__title" >AweTrip</span>
+        </section>
+        <section class="mdc-toolbar__section mdc-toolbar__section--align-end" role="toolbar">
+            <a href="index.html" class="material-icons mdc-toolbar__icon" aria-label="home" alt="home">home</a>
+            <a href="profile.html" class="material-icons mdc-toolbar__icon" aria-label="help" alt="help">help</a>
+            <a href="signup.html" class="material-icons mdc-toolbar__icon" aria-label="Login / Sign Up" alt="Login / Sign Up">account_circle</a>
+        </section>
+    </div>
+</header>
+<main>
+    <div class="mdc-layout-grid">
+        <div class="mdc-layout-grid__inner">
+            <div class="mdc-layout-grid__cell"></div>
+            <div class="mdc-layout-grid__cell" id="main">
+                <h1 class="mdc-typography--display1">Let me find your local guide</h1>
+
+                <form action="#" id="search-form">
+                    <div class="mdc-text-field mdc-text-field--fullwidth">
+                        <input class="mdc-text-field__input"
+                               type="text"
+                               id="autocomplete"
+                               placeholder="City"
+                               aria-label="Full-Width Text Field">
+                    </div>
+                    <button type="submit"
+                            class="mdc-button
+                                           mdc-button--raised
+                                           mdc-ripple-surface"
+                            data-mdc-auto-init="MDCRipple">
+                        Find guide
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="mdc-layout-grid__cell"></div>
+    </div>
+
+</main>
+<br/>
+<br/>
+<br/>
+<br/>
+<p class="mdc-typography--headline" id="location"></p>
+
+<script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+<script>window.mdc.autoInit();</script>
+<script>
+    var input = document.getElementById('autocomplete');
+    var autocomplete = new google.maps.places.Autocomplete(input);
+
+    var buttons = document.querySelectorAll('.mdc-button, .mdc-fab');
+    for (var i = 0, button; button = buttons[i]; i++) {
+        mdc.ripple.MDCRipple.attachTo(button);
+    }
+
+    document.getElementById('search-form').addEventListener('submit', function(evt) {
+        evt.preventDefault();
+        var loc = evt.target.elements.autocomplete.value;
+        document.getElementById('location').textContent = input.value;
+    });
+
+</script>
+</body>
+</html>

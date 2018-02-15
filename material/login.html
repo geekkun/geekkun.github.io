@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>AweTrip</title>
+    <link
+            rel="stylesheet"
+            href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/signlog.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body class="mdc-typography">
+<header class="mdc-toolbar">
+    <div class="mdc-toolbar__row">
+        <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
+            <span class="mdc-toolbar__title" >AweTrip</span>
+        </section>
+        <section class="mdc-toolbar__section mdc-toolbar__section--align-end" role="toolbar">
+            <a href="index.html" class="material-icons mdc-toolbar__icon" aria-label="home" alt="home">home</a>
+            <a href="profile.html" class="material-icons mdc-toolbar__icon" aria-label="help" alt="help">help</a>
+            <a href="signup.html" class="material-icons mdc-toolbar__icon" aria-label="Login / Sign Up" alt="Login / Sign Up">account_circle</a>
+        </section>
+    </div>
+</header>
+<main>
+    <div class="mdc-layout-grid">
+        <div class="mdc-layout-grid__inner">
+            <div class="mdc-layout-grid__cell"></div>
+
+            <div class="mdc-layout-grid__cell">
+                <h1 class="mdc-typography--display1">Login</h1>
+
+                <form action="signup.html">
+                    <button type="submit"
+                            class="mdc-button
+                                   mdc-button--raised
+                                   mdc-ripple-surface"
+                            data-mdc-auto-init="MDCRipple">
+                        Sign Up page
+                    </button>
+                </form>
+
+                <form action="#" id="sign-form">
+
+                    <div class="mdc-text-field mdc-text-field--fullwidth">
+                        <input class="mdc-text-field__input"
+                               type="email"
+                               id="email"
+                               placeholder="E-mail"
+                               aria-label="E-mail"
+                               >
+                        <div class="mdc-line-ripple"></div>
+                    </div>
+
+                    <div class="mdc-text-field mdc-text-field--fullwidth">
+                        <input class="mdc-text-field__input"
+                               type="password"
+                               id="password"
+                               placeholder="Password"
+                               aria-label="Password"
+                               required minlength=8
+                               autocomplete="current-password"
+                        >
+                    </div>
+
+                    <br/>
+
+                    <button type="submit"
+                            class="mdc-button
+                               mdc-button--raised
+                               mdc-ripple-surface"
+                            data-mdc-auto-init="MDCRipple">
+                        Login
+                    </button>
+                </form>
+
+                <!-- The p element below is where we'll eventually output our greeting -->
+                <p class="mdc-typography--headline" id="greeting"></p>
+            </div>
+            <div class="mdc-layout-grid__cell"></div>
+        </div>
+    </div>
+</main>
+
+<script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+<script>window.mdc.autoInit();</script>
+<script src="js/index.js"></script>
+</body>
+</html>
