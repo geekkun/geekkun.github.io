@@ -28,7 +28,7 @@ const styles = theme => ({
     },
 });
 
-class TextFields extends React.Component {
+class LoginFields extends React.Component {
     state = {
         name: 'Cat in the Hat',
         age: '',
@@ -44,17 +44,16 @@ class TextFields extends React.Component {
 
     render() {
         const { classes } = this.props;
-
         return (
             <form className={styles("").container} noValidate autoComplete="on">
-                <TextField
-                    id="name"
-                    label="Your Name"
-                    placeholder="Name"
-                    className={styles("").textField}
-                    margin="normal"
-                />
-                <br/>
+                {/*<TextField*/}
+                    {/*id="name"*/}
+                    {/*label="Your Name"*/}
+                    {/*placeholder="Name"*/}
+                    {/*className={styles("").textField}*/}
+                    {/*margin="normal"*/}
+                {/*/>*/}
+                {/*<br/>*/}
                 <TextField
                     required
                     id="email"
@@ -66,6 +65,7 @@ class TextFields extends React.Component {
                 />
                 <br/>
                 <TextField
+                    required
                     id="password"
                     label="Password"
                     className={styles("").textField}
@@ -122,8 +122,6 @@ class HorizontalLinearStepper extends React.Component {
         skipped: new Set(),
     };
 
-
-
     isStepOptional = step => {
         return step === -1;
     };
@@ -151,6 +149,94 @@ class HorizontalLinearStepper extends React.Component {
             activeStep: activeStep - 1,
         });
     };
+
+    textFields = () => {
+        const { activeStep } = this.state;
+        if (activeStep === 0) return(
+            <form className={styles("").container} noValidate autoComplete="on">
+                <TextField
+                id="name"
+                label="Your Name"
+                placeholder="Name"
+                className={styles("").textField}
+                margin="normal"
+                />
+                <br/>
+                <TextField
+                    required
+                    id="email"
+                    label="E-mail"
+                    type="email"
+                    // defaultValue="Hello World"
+                    className={styles("").textField}
+                    margin="normal"
+                />
+                <br/>
+                <TextField
+                    required
+                    id="password"
+                    label="Password"
+                    className={styles("").textField}
+                    type="password"
+                    autoComplete="current-password"
+                    margin="normal"
+                />
+                {/*<TextField*/}
+                {/*error*/}
+                {/*id="error"*/}
+                {/*label="Error"*/}
+                {/*defaultValue="Hello World"*/}
+                {/*className={styles("").textField}*/}
+                {/*margin="normal"*/}
+                {/*/>*/}
+                {/*<TextField*/}
+                {/*id="helperText"*/}
+                {/*label="Helper text"*/}
+                {/*defaultValue="Default Value"*/}
+                {/*className={styles("").textField}*/}
+                {/*helperText="Some important text"*/}
+                {/*margin="normal"*/}
+                {/*/>*/}
+                <br/>
+            </form>
+        )
+        else if (activeStep ===1 ){
+            return(
+                <form className={styles("").container} noValidate autoComplete="on">
+                    <TextField
+                    id="languages"
+                    label="Language of tours"
+                    placeholder="Language of tours"
+                    className={styles("").textField}
+                    margin="normal"
+                    />
+                    <br/>
+                    <input type="checkbox" name="vehicle1" value="Bike" /> I have a bike
+                        <br/>
+                    <input type="checkbox" name="vehicle2" value="Car"/> I have a car
+                        <br/>
+                </form>
+            )
+        }
+        else if (activeStep ===2 ){
+            return(
+                <form className={styles("").container} noValidate autoComplete="on">
+                    <input type="checkbox" name="interest1" value="Art" /> Art
+                    <br/>
+                    <input type="checkbox" name="interest2" value="Clubs"/> Clubs
+                    <br/>
+                    <input type="checkbox" name="interest3" value="Pubs"/> Pubs
+                    <br/>
+                    <input type="checkbox" name="interest4" value="Rooftops"/> Rooftops
+                    <br/>
+                    <input type="checkbox" name="interest5" value="Shopping"/> Shopping
+                    <br/>
+                    <input type="checkbox" name="interest6" value="Sightseeing"/> Sightseeing
+                    <br/>
+                </form>
+            )
+        }
+    }
 
     handleSkip = () => {
         const { activeStep } = this.state;
@@ -217,8 +303,11 @@ class HorizontalLinearStepper extends React.Component {
                     ) : (
                         <div>
                             {/*INSERT HERE*/}
+
+`
                             <Typography className={styles("").instructions}>{getStepContent(activeStep)}</Typography>
                             {/*OR HERE*/}
+                            {this.textFields()}
                             <div>
                                 <Button
                                     disabled={activeStep === 0}
@@ -261,7 +350,7 @@ class SignUp extends Component{
             <div id='signup'>
                 <h1>Sign Up</h1>
                 <HorizontalLinearStepper/>
-                <TextFields/>
+                {/*<TextFields/>*/}
             </div>
         )
     }
