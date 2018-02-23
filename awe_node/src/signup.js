@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Popover from 'material-ui/Popover';
 import Typography from 'material-ui/Typography';
-import './demos/steppers/HorizontalLinearStepper';
+// import './demos/steppers/HorizontalLinearStepper';
 import './signup.css';
 import PropTypes from 'prop-types';
 import { withStyles } from 'material-ui/styles';
@@ -155,11 +155,30 @@ class HorizontalLinearStepper extends React.Component {
         if (activeStep === 0) return(
             <form className={styles("").container} noValidate autoComplete="on">
                 <TextField
-                id="name"
-                label="Your Name"
-                placeholder="Name"
-                className={styles("").textField}
-                margin="normal"
+                    required
+                    id="name"
+                    label="Your Name"
+                    placeholder="Name"
+                    className={styles("").textField}
+                    margin="normal"
+                />
+                <br/>
+                <TextField
+                    required
+                    id="surname"
+                    label="Your Surname"
+                    placeholder="Surname"
+                    className={styles("").textField}
+                    margin="normal"
+                />
+                <br/>
+                <TextField
+                    required
+                    id="username"
+                    label="Username"
+                    placeholder="Username"
+                    className={styles("").textField}
+                    margin="normal"
                 />
                 <br/>
                 <TextField
@@ -168,6 +187,14 @@ class HorizontalLinearStepper extends React.Component {
                     label="E-mail"
                     type="email"
                     // defaultValue="Hello World"
+                    className={styles("").textField}
+                    margin="normal"
+                />
+                <br/>
+                <TextField
+                    id="phone"
+                    label="Phone number"
+                    placeholder="Phone"
                     className={styles("").textField}
                     margin="normal"
                 />
@@ -203,18 +230,43 @@ class HorizontalLinearStepper extends React.Component {
         else if (activeStep ===1 ){
             return(
                 <form className={styles("").container} noValidate autoComplete="on">
+                    <h3> Languages</h3>
+                    <h4>I can give tours in</h4>
+                    <input type="checkbox" name="lang_english" value="English" /> English
+                    <br/>
+                    <input type="checkbox" name="lang_russian" value="Russian"/> Russian
+                    <br/>
+                    <input type="checkbox" name="lang_french" value="French" /> French
+                    <br/>
+                    <input type="checkbox" name="lang_japanese" value="Japanese"/> Japanese
+                    <br/>
+                    <input type="checkbox" name="lang_chinese" value="Chinese"/> Chinese
+                    <br/>
                     <TextField
-                    id="languages"
-                    label="Language of tours"
-                    placeholder="Language of tours"
+                    id="languages_other"
+                    label="Other languages"
+                    placeholder="Language"
                     className={styles("").textField}
                     margin="normal"
                     />
-                    <br/>
-                    <input type="checkbox" name="vehicle1" value="Bike" /> I have a bike
-                        <br/>
+                    <h3>Pricing</h3>
+                    <TextField
+                        id="price"
+                        label="Minimal tour price"
+                        placeholder="Price"
+                        type="number"
+                        min="1"
+
+                        className={styles("").textField}
+                        margin="normal"
+                    />
+                    <h3>Transportation</h3>
+                    {/*<br/>*/}
+                    {/*<input type="checkbox" name="vehicle1" value="Bike" /> I have a bike*/}
+                        {/*<br/>*/}
                     <input type="checkbox" name="vehicle2" value="Car"/> I have a car
                         <br/>
+
                 </form>
             )
         }
@@ -308,6 +360,7 @@ class HorizontalLinearStepper extends React.Component {
                             <Typography className={styles("").instructions}>{getStepContent(activeStep)}</Typography>
                             {/*OR HERE*/}
                             {this.textFields()}
+                            <br/>
                             <div>
                                 <Button
                                     disabled={activeStep === 0}
